@@ -4,13 +4,6 @@
     <list default="true" id="37f628b6-91d9-4cd8-9061-d090e6072199" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GetData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GetData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InlineKeyboardBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InlineKeyboardBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SetOfKeyboards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SetOfKeyboards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GetData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GetData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InlineKeyboardBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InlineKeyboardBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SetOfKeyboards.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SetOfKeyboards.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,13 +21,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="318" column="16" selection-start-line="318" selection-start-column="16" selection-end-line="318" selection-end-column="16" />
+            <state relative-caret-position="382">
+              <caret line="325" column="24" selection-start-line="325" selection-start-column="24" selection-end-line="325" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#12780#12781#0" expanded="true" />
-                <element signature="e#12951#12952#0" expanded="true" />
-                <marker date="1551427581488" expanded="true" signature="8809:9138" ph="..." />
+                <element signature="e#12755#12756#0" expanded="true" />
+                <element signature="e#12790#12791#0" expanded="true" />
+                <element signature="e#12936#12937#0" expanded="true" />
+                <element signature="e#13006#13007#0" expanded="true" />
+                <marker date="1551427721480" expanded="true" signature="8809:9138" ph="..." />
               </folding>
             </state>
           </provider>
@@ -125,9 +120,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551427582504" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testbot1" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551429351146" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -143,7 +138,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in bot">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="bot" />
@@ -151,8 +146,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in bot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in bot" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -191,7 +195,7 @@
     <frame x="-7" y="-7" width="1038" height="614" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49717513" visible="true" weight="0.22392638" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49717513" visible="true" weight="0.19734152" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -201,7 +205,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.27593362" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3692946" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.40456432" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -325,13 +329,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="318" column="16" selection-start-line="318" selection-start-column="16" selection-end-line="318" selection-end-column="16" />
+        <state relative-caret-position="382">
+          <caret line="325" column="24" selection-start-line="325" selection-start-column="24" selection-end-line="325" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12780#12781#0" expanded="true" />
-            <element signature="e#12951#12952#0" expanded="true" />
-            <marker date="1551427581488" expanded="true" signature="8809:9138" ph="..." />
+            <element signature="e#12755#12756#0" expanded="true" />
+            <element signature="e#12790#12791#0" expanded="true" />
+            <element signature="e#12936#12937#0" expanded="true" />
+            <element signature="e#13006#13007#0" expanded="true" />
+            <marker date="1551427721480" expanded="true" signature="8809:9138" ph="..." />
           </folding>
         </state>
       </provider>
@@ -342,10 +348,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>bot:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
