@@ -1,24 +1,11 @@
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendSticker;
-import org.telegram.telegrambots.meta.api.methods.updates.GetUpdates;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
-
-import java.io.InputStreamReader;
-import java.net.URLConnection;
 import java.util.*;
 
 import static org.apache.http.protocol.HTTP.USER_AGENT;
@@ -27,42 +14,41 @@ public class Bot extends TelegramLongPollingBot {
 
     private static Boolean isAuth = false;
     private static Boolean isPollNow = false;
-    private static Boolean isFirstTimePoll = true;
     public static Map<String, String> phones = new HashMap<>();
     public static Map<String, String> questions = new LinkedHashMap<>();
 
 //    GetUpdates updates = new GetUpdates().setOffset(0).setLimit(10).setTimeout(5);
 //    List<String> updatesvalues = new ArrayList<>();
 
-    private void sendGet(String url) throws Exception {
-
-        URL obj = new URL(url);
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-        // optional default is GET
-        con.setRequestMethod("GET");
-
-        //add request header
-        con.setRequestProperty("User-Agent", USER_AGENT);
-
-        int responseCode = con.getResponseCode();
-        System.out.println("\nSending 'GET' request to URL : " + url);
-        System.out.println("Response Code : " + responseCode);
-
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(con.getInputStream()));
-        String inputLine;
-        StringBuffer response = new StringBuffer();
-
-        while ((inputLine = in.readLine()) != null) {
-            response.append(inputLine);
-        }
-        in.close();
-
-        //print result
-        System.out.println(response.toString());
-
-    }
+//    private void sendGet(String url) throws Exception {
+//
+//        URL obj = new URL(url);
+//        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+//
+//        // optional default is GET
+//        con.setRequestMethod("GET");
+//
+//        //add request header
+//        con.setRequestProperty("User-Agent", USER_AGENT);
+//
+//        int responseCode = con.getResponseCode();
+//        System.out.println("\nSending 'GET' request to URL : " + url);
+//        System.out.println("Response Code : " + responseCode);
+//
+//        BufferedReader in = new BufferedReader(
+//                new InputStreamReader(con.getInputStream()));
+//        String inputLine;
+//        StringBuffer response = new StringBuffer();
+//
+//        while ((inputLine = in.readLine()) != null) {
+//            response.append(inputLine);
+//        }
+//        in.close();
+//
+//        //print result
+//        System.out.println(response.toString());
+//
+//    }
 
     /**
      * Метод для приема сообщений.
@@ -81,13 +67,13 @@ public class Bot extends TelegramLongPollingBot {
         Message message = update.getMessage();
         //SendMsg(message," "+message);
         if (isPollNow == true) {
-            if (isFirstTimePoll == true) isFirstTimePoll = false;
-            else DoPoll(message);
+            DoPoll(message);
         } else if (message != null && message.hasText()) {
             String text_message = message.getText();
             switch (text_message) {
                 case "/start":
-                    SendMsgKey(message, SetOfKeyboards.start(), "Разрешите боту узнать Ваш номер телефона для авторизации в системе");
+                    SendMsgKey(message, SetOfKeyboards.start(), "Хоба-оба, работяга. Чтобы общаться с тобой мне нужено узнать твой номерок, который должен был указать всесильный HR" +
+                            "\n Позволишь?");
                     break;
                 case "/faq": case "FAQ":
                     try {
@@ -113,13 +99,24 @@ public class Bot extends TelegramLongPollingBot {
                             "\n Ты теперь в папужьей стае какаду. Давай я задам тебе несколько вопросов?");
                     startPoll(update.getMessage().getContact().getPhoneNumber(),"df");
                 } else {
-                    SendMsg(message, "Kakido не знает человека с таким телефоном" +
-                            "\n Чтобы Kakido считал вас своим другом, попросите HR или руководителя добавить вас ко мне в стаю");
+                    SendMsg(message, "Kakido не шарит из чьего ты племени, братишка. Совсем не помню такого номера" +
+                            "\n Но не отчаивайся, обратись к HR и вскоре я вспомню твой номер телефона, уж будь уверен. Чик-чирик");
+                    SendSticker sticker = new SendSticker();
+                    sticker.setChatId(message.getChatId().toString());
+                    sticker.setSticker("CAADAgADEAADnZ3dGP2KM0HHWIdoAg");
+                    try {
+                        execute(sticker);
+                    }
+                    catch (TelegramApiException e) {
+                        e.printStackTrace();
+                    }
+                    SendMsg(message, "Чуть не забыл, оцени, как стиканы вышли?" +
+                            "\n https://t.me/addstickers/Kakido");
                 }
             }  else {
             SendSticker sticker = new SendSticker();
             sticker.setChatId(message.getChatId().toString());
-            sticker.setSticker("CAADAgADCAADnZ3dGPnAJ0f8V2RTAg");
+            sticker.setSticker("CAADAgADEAADnZ3dGP2KM0HHWIdoAg");
             try {
                 execute(sticker);
             }
@@ -174,15 +171,15 @@ public class Bot extends TelegramLongPollingBot {
                 case "тип 1":
                     if (message.hasSticker() == true) {
                         switch (message.getSticker().getFileId()) {
-                            case "CAADAgADAQADnZ3dGNnNNeUfZznGAg":
+                            case "CAADAgADCwADnZ3dGHyPTq_F22T6Ag":
                                 return "1";
-                            case "CAADAgADAgADnZ3dGBwhcGl1ndt0Ag":
+                            case "CAADAgADDAADnZ3dGDK0ozRoRwrkAg":
                                 return "2";
-                            case "CAADAgADAwADnZ3dGD43e6mU6YfoAg":
+                            case "CAADAgADDQADnZ3dGHKoIZfGENd8Ag":
                                 return "3";
-                            case "CAADAgADBAADnZ3dGCwW3JbdPHv0Ag":
+                            case "CAADAgADDgADnZ3dGIY6CqyHEOnrAg":
                                 return "4";
-                            case "CAADAgADBQADnZ3dGG9H47a0W_HcAg":
+                            case "CAADAgADDwADnZ3dGAKbLg8aYs2PAg":
                                 return "5";
                             default:
                                 return "no result";
@@ -193,9 +190,9 @@ public class Bot extends TelegramLongPollingBot {
                 case "тип 2":
                     if (message.hasSticker() == true) {
                         switch (message.getSticker().getFileId()) {
-                            case "CAADAgADBgADnZ3dGMGdLB46W5ToAg":
+                            case "CAADAgADEAADnZ3dGP2KM0HHWIdoAg":
                                 return "yes";
-                            case "CAADAgADBwADnZ3dGMsnm6m0h1fDAg":
+                            case "CAADAgADEQADnZ3dGEVatZXDL8-jAg":
                                 return "no";
                             default:
                                 return "no result";
@@ -220,7 +217,6 @@ public class Bot extends TelegramLongPollingBot {
         long chat_id = Long.parseLong(phones.get(number));
         Message msg_start = new Message();
         SendMsgInPoll(chat_id, "Давай начнем опрос, набери любые символы");
-        isFirstTimePoll = true;
      }
 
     private synchronized void SendCallback(Update update) {
@@ -325,6 +321,7 @@ public class Bot extends TelegramLongPollingBot {
      */
     public String getBotToken() {
         return "740462693:AAEnO_ZOeutDTMfaR_fhNle7tzfdC-KE9Ic";
+
     }
 
 

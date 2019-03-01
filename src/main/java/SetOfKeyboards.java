@@ -17,7 +17,7 @@ public class SetOfKeyboards {
 
         KeyboardRow keyboardFirstRow = new KeyboardRow();
         KeyboardButton keyboardButton = new KeyboardButton();
-        keyboardButton.setText("Поделиться телефоном").setRequestContact(true);
+        keyboardButton.setText("Поделиться номерком").setRequestContact(true);
         keyboardFirstRow.add(keyboardButton);
         keyboard1.add(keyboardFirstRow);
 

@@ -11,7 +11,7 @@ public class GetData {
     }
 
     public static void getQuestions() {
-        Bot.questions.put("Оцените насколько вам нравится ваше рабочее место от 1 до 5 попугаев.", "тип 1");
+        Bot.questions.put("Зацени своое рабочее место от 1 до 5 попугаев.", "тип 1");
         Bot.questions.put("Познакомилиь ли вы с большей части команды?", "тип 2");
         Bot.questions.put("Вас ознакомили с вашими обязанностями", "тип 2");
         Bot.questions.put("Как дела?", "тип 3");
