@@ -1,17 +1,20 @@
 import java.util.ArrayList;
+import java.util.Map;
 
 public class GetData {
-    public static void getPhones() {
-        Bot.phones.add("11");
-        Bot.phones.add("222");
-        Bot.phones.add("333");
-        Bot.phones.add("79312345753");
+    public static Map<String, String> getPhones(Map<String, String> phones) {
+        phones.put("11", "q");
+        phones.put("222", "w");
+        phones.put("333", "r");
+        phones.put("79312345753", "");
+        return phones;
     }
 
     public static void getQuestions() {
-        Bot.questions.add("Вопрос 1");
-        Bot.questions.add("Вопрос 2");
-        Bot.questions.add("Вопрос 3");
-        Bot.questions.add("Вопрос 4");
+        Bot.questions.put("Оцените насколько вам нравится ваше рабочее место от 1 до 5 попугаев.", "тип 1");
+        Bot.questions.put("Познакомилиь ли вы с большей части команды?", "тип 2");
+        Bot.questions.put("Вас ознакомили с вашими обязанностями", "тип 2");
+        Bot.questions.put("Как дела?", "тип 3");
+        Bot.questions.put("Есть ли у вас какие-либо предложения?", "тип 3");
     }
 }

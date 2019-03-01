@@ -1,6 +1,7 @@
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,25 +69,5 @@ public class InlineKeyboardBuilder {
         return message;
     }
 
-    public SendMessage buildWithContact() {
-        SendMessage message = new SendMessage();
 
-        message.setChatId(chatId);
-        message.setText(text);
-
-        InlineKeyboardMarkup keyboardMarkup = new InlineKeyboardMarkup();
-
-        keyboardMarkup.setKeyboard(keyboard);
-        message.setReplyMarkup(keyboardMarkup);
-
-        return message;
-    }
 }
-
-
-//    SendMessage message1 = InlineKeyboardBuilder.create(message.getChatId())
-//            .setText("Разрешите боту узнать Ваш номер телефона для авторизации в системе")
-//            .row()
-//            .button("Сообщить телефон", "check_phone")
-//            .endRow()
-//            .build();
