@@ -1,1 +1,1 @@
-web: java -jar out/artifacts/bot_jar/TelegramBot.jar
+web: java -Dserver.port=$PORT -jar out/artifacts/bot_jar/TelegramBot.jar
