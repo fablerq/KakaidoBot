@@ -1,1 +1,1 @@
-bot: java -jar out/artifacts/bot.jar
+web:    java $JAVA_OPTS -cp target/classes:target/dependency/* Main
