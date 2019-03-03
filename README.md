@@ -1,2 +1,2 @@
-# KakaidoBot
-Bot for the global Kakaido feedback service
+# KakidoBot
+Bot for the global Kakido feedback service
