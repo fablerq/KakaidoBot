@@ -1,0 +1,1 @@
+bot: java -jar out/artifacts/bot.jar
