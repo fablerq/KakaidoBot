@@ -1,1 +1,1 @@
-web: java out/artifacts/bot.jar
+web: java -jar out/artifacts/bot.jar
