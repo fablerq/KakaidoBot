@@ -226,21 +226,21 @@ public class Bot extends TelegramLongPollingBot {
         switch (callback) {
             case "about_service":
                 try {
-                    execute(SetOfKeyboards.HelpKeyboardAfterAnswer("А сервис у нас простой, ты - кандидат...", chat_id));
+                    execute(SetOfKeyboards.HelpKeyboardAfterAnswer("Kakido - сервис фидбэка о новом рабочем месте от сотрудника на испытательном сроке", chat_id));
                 } catch (TelegramApiException e1) {
                     e1.printStackTrace();
                 }
                 break;
             case "how_auth":
                 try {
-                    execute(SetOfKeyboards.HelpKeyboardAfterAnswer("Чтобы быть авторизированным, надо ...", chat_id));
+                    execute(SetOfKeyboards.HelpKeyboardAfterAnswer("Чтобы авторизироваться, номер телефона должен быть забит в базе сервиса вашим HR", chat_id));
                 } catch (TelegramApiException e1) {
                     e1.printStackTrace();
                 }
                 break;
             case "about_private":
                 try {
-                    execute(SetOfKeyboards.HelpKeyboardAfterAnswer("Ваши данные узнаешт лишь hr, а телега вообще надежна ...", chat_id));
+                    execute(SetOfKeyboards.HelpKeyboardAfterAnswer("Ваш непосредственный руководитель не будет иметь доступа к вашим данным напрямую. С данными взаимодействует только HR", chat_id));
                 } catch (TelegramApiException e1) {
                     e1.printStackTrace();
                 }
@@ -312,7 +312,7 @@ public class Bot extends TelegramLongPollingBot {
      * @return имя бота
      */
     public String getBotUsername() {
-        return "kakido_bot";
+        return LINE_BOT_CHANNEL_SECRET;
     }
 
     /**
@@ -320,7 +320,7 @@ public class Bot extends TelegramLongPollingBot {
      * @return token для бота
      */
     public String getBotToken() {
-        return "740462693:AAHRW3xg5fGiHqtnl4B1kdvtQsWWAbim118";
+        return LINE_BOT_CHANNEL_SECRET;
 
     }
 
