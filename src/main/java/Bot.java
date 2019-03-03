@@ -312,7 +312,7 @@ public class Bot extends TelegramLongPollingBot {
      * @return имя бота
      */
     public String getBotUsername() {
-        return LINE_BOT_CHANNEL_SECRET;
+        return "LINE_BOT_CHANNEL_SECRET";
     }
 
     /**
@@ -320,7 +320,7 @@ public class Bot extends TelegramLongPollingBot {
      * @return token для бота
      */
     public String getBotToken() {
-        return LINE_BOT_CHANNEL_SECRET;
+        return "LINE_BOT_CHANNEL_SECRET";
 
     }
 
