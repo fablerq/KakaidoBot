@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37f628b6-91d9-4cd8-9061-d090e6072199" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,12 +20,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="322" column="40" selection-start-line="322" selection-start-column="40" selection-end-line="322" selection-end-column="40" />
+            <state relative-caret-position="330">
+              <caret line="312" column="7" lean-forward="true" selection-start-line="312" selection-start-column="7" selection-end-line="312" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#12997#12998#0" expanded="true" />
                 <element signature="e#13043#13044#0" expanded="true" />
+                <element signature="e#13178#13179#0" expanded="true" />
+                <element signature="e#13248#13249#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -297,12 +298,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Bot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="322" column="40" selection-start-line="322" selection-start-column="40" selection-end-line="322" selection-end-column="40" />
+        <state relative-caret-position="330">
+          <caret line="312" column="7" lean-forward="true" selection-start-line="312" selection-start-column="7" selection-end-line="312" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#12997#12998#0" expanded="true" />
             <element signature="e#13043#13044#0" expanded="true" />
+            <element signature="e#13178#13179#0" expanded="true" />
+            <element signature="e#13248#13249#0" expanded="true" />
           </folding>
         </state>
       </provider>
