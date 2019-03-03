@@ -1,1 +1,1 @@
-worker: java -jar out/artifacts/bot_jar/TelegramBot.jar
+worker: java -Dserver.port=$PORT -jar out/artifacts/bot_jar/TelegramBot.jar
