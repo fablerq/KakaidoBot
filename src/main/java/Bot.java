@@ -92,7 +92,7 @@ public class Bot extends TelegramLongPollingBot {
                 GetData.getPhones(phones);
                 String phone = update.getMessage().getContact().getPhoneNumber();
                 //SendMsg(message, phone);
-                if (phones.containsKey(phone)) {
+                if (phone == "79110297197" || phone == "+79110297197") {
                     isAuth = true;
                     phones.replace(phone, message.getChatId().toString());
                     SendMsgKey(message, SetOfKeyboards.main(),"Я вспомнил твой номер, тебя записывал один хороший человек. Кажется его звали Энч..Энчар-р-р" +
