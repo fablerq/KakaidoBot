@@ -5,8 +5,7 @@ public class GetData {
     public static Map<String, String> getPhones(Map<String, String> phones) {
         phones.put("11", "q");
         phones.put("222", "w");
-        phones.put("+79110297197", "+79110297197");
-         phones.put("79110297197", "79110297197");
+        phones.put("79110297197", "");
         phones.put("phone", "");
         return phones;
     }
